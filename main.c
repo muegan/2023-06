@@ -3,46 +3,42 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int sumTwo(int a, int b)
+int factorial(int n)
 {
-	int c = a+b;
-	return c;
-}
-
-int square(int n)
-{
-	return n*n;
-}
-
-int get_max(int x, int y)
-{
-	if (x>y)
-		return x;
+	int res=1;
+	int i;
 	
-	return y;
+	for(i=1; i<=n; i++)
+		res=res*i;
+		
+	return res; 
+}
+
+int combination(int n, int r)
+{
+	int div1, div2;
+	
+	div1=factorial(n);
+	div2=factorial(n-r)*factorial(r);
+	return (div1/div2);//factorial 함수로 수식 계산	
 }
 
 int main(int argc, char *argv[]) {
 	
-	int a,b;
-	a=3, b=10;
+	int n, r;
+	int div1, div2;
+	int result;
 	
-	printf("sum two result : %i\n", sumTwo(a,b));
+	printf("input n : ");
+	scanf("%d", &n); 
 	
-	
-	int n;
-	n=5;
-	
-	printf("square result : %d\n", square(n));
-	
-	
-	int x, y;
-	x=3, y=7;
-	
-	printf("get max result : %d\n", get_max(x,y));
+	printf("input r : ");
+	scanf("%d", &r); 
 	
 	
+	result=combination(n,r);
 	
-	return 0;
-
+	printf("result is %d\n", result);
+	
+	return 0; 
 }
