@@ -3,19 +3,18 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-void sumTwo(int a, int b)
+int square(int n)
 {
 	int result;
-	result=a+b;
-	
-	printf("%d", result);
+	result=n*n;
+	printf("result is %d", result);
 	
 }
 
 int main(int argc, char *argv[]) {
 	
-	int a, b;
-	sumTwo(3,5);
+	int n;
+	square(3);
 	
 	return 0;
 
