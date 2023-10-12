@@ -3,17 +3,20 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-void func1()
-{	
-	int x;
-	printf("func1 x is at %p\n", &x);	
+void sumTwo(int a, int b)
+{
+	int result;
+	result=a+b;
+	
+	printf("%d", result);
+	
 }
 
 int main(int argc, char *argv[]) {
 	
-	int x;
-	printf("main x is at %p\n", &x);
-	func1();
+	int a, b;
+	sumTwo(3,5);
 	
 	return 0;
+
 }
